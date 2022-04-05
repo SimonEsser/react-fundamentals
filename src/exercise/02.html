@@ -12,12 +12,14 @@
   <script type="module">
     const rootElement = document.getElementById('root')
 
+    const helloElement = React.createElement('span', {}, 'Hello')
+    const worldElement = React.createElement('span', {}, 'World')
     const reactElement = React.createElement(
       'div',
       {className: 'container'},
-      React.createElement('span', null, 'Hello'),
+      helloElement,
       ' ',
-      React.createElement('span', null, 'World'),
+      worldElement,
     )
 
     ReactDOM.render(reactElement, rootElement)
