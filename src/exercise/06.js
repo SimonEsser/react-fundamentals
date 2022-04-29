@@ -16,7 +16,8 @@ function UsernameForm({onSubmitUsername}) {
   // 🐨 Call `onSubmitUsername` with the value of the input
   const handleSubmit = event => {
     event.preventDefault()
-    alert(`You entered: ${event.target.elements.usernameInput.value}`)
+    const value = event.target.elements.usernameInput.value
+    onSubmitUsername(value)
   }
 
   // 🐨 add the onSubmit handler to the <form> below
@@ -27,7 +28,7 @@ function UsernameForm({onSubmitUsername}) {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="usernameInput">Username:</label>
-        <input id="usernameInput" type="text" />
+        <input name="username" id="usernameInput" type="text" />
       </div>
       <button type="submit">Submit</button>
     </form>
