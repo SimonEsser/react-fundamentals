@@ -50,7 +50,7 @@ function UsernameForm({onSubmitUsername}) {
       <div role="alert" style={{color: 'red'}}>
         {error}
       </div>
-      <button type="submit" disabled={error ? true : false}>
+      <button type="submit" disabled={Boolean(error)}>
         Submit
       </button>
     </form>
