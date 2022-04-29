@@ -38,7 +38,6 @@ function UsernameForm({onSubmitUsername}) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <div role="alert">{errorState}</div>
         <label htmlFor="usernameInput">Username:</label>
         <input
           name="username"
@@ -47,6 +46,9 @@ function UsernameForm({onSubmitUsername}) {
           ref={usernameInputRef}
           onChange={handleChange}
         />
+      </div>
+      <div role="alert" style={{color: 'red'}}>
+        {errorState}
       </div>
       <button type="submit" disabled={errorState ? true : false}>
         Submit
